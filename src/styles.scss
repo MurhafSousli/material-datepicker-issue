@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink';
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.mat-cell, .mat-header-cell {
+  text-align: center;
+}
+
+.app-dialog {
+
+  .mat-toolbar {
+    padding: 0 2em;
+    div {
+      margin: auto;
+    }
+  }
+  .mat-dialog-container {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .mat-dialog-content {
+    margin: 0;
+    max-width: 600px;
+    padding: 2em 2em 0;
+  }
+  .mat-dialog-actions {
+    padding: 1em;
+    margin-bottom: 0 !important;
+  }
+}
+
+.column-gap {
+  mat-form-field:last-child {
+    margin-right: 2em;
+  }
+}

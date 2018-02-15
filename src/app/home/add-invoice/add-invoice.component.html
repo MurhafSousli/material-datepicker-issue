@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <div>Customer Service Request</div>
+</mat-toolbar>
+<mat-dialog-content>
+  Please fill as many details as possible so we can provide you a better service:
+  <form [formGroup]="form">
+    <div fxLayout class="column-gap">
+      <mat-form-field fxFlex fxFlexOrder="1">
+        <input type="text" matInput placeholder="Company Name" formControlName="companyName">
+      </mat-form-field>
+      <mat-form-field fxFlex fxFlexOrder="0">
+        <input type="text" matInput placeholder="Company Number" formControlName="companyNumber">
+      </mat-form-field>
+    </div>
+    <div fxLayout class="column-gap">
+      <mat-form-field fxFlex fxFlexOrder="1">
+        <input type="text" matInput placeholder="First Name" formControlName="firstName">
+      </mat-form-field>
+      <mat-form-field fxFlex fxFlexOrder="0">
+        <input type="text" matInput placeholder="Last Name" formControlName="lastName">
+      </mat-form-field>
+    </div>
+    <mat-form-field>
+      <input type="email" matInput placeholder="E-mail Address" formControlName="email">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea type="text" matInput placeholder="Request" formControlName="request" rows="4"></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="submit()">Send</button>
+  <button mat-button (click)="dialogRef.close()">Cancel</button>
+</mat-dialog-actions>

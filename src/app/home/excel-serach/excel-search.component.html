@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <div>Export to Excel - Received</div>
+</mat-toolbar>
+<mat-dialog-content>
+  <form [formGroup]="form">
+    <mat-form-field>
+      <input matInput [matDatepicker]="fromPicker" placeholder="From Date" formControlName="from" required>
+      <mat-datepicker-toggle matSuffix [for]="fromPicker"></mat-datepicker-toggle>
+      <mat-datepicker #fromPicker></mat-datepicker>
+      <!-- <mat-datepicker dir="rtl" #fromPicker></mat-datepicker> -->
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [matDatepicker]="toPicker" placeholder="To Date" formControlName="to" required>
+      <mat-datepicker-toggle matSuffix [for]="toPicker"></mat-datepicker-toggle>
+      <mat-datepicker #toPicker></mat-datepicker>
+      <!-- <mat-datepicker dir="rtl" #toPicker></mat-datepicker> -->
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button color="primary" (click)="submit()">Export</button>
+  <button mat-button (click)="dialogRef.close()">Cancel</button>
+</mat-dialog-actions>

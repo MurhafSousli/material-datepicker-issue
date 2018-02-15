@@ -1,0 +1,25 @@
+mat-form-field {
+  width: 100%;
+}
+
+app-invite-partner {
+  max-width: 900px;
+}
+.column {
+  &:last-child {
+    margin-right: 2em;
+  }
+}
+.send-file {
+  position: relative;
+  div {
+    margin-top: 1em;
+  }
+  mat-form-field {
+    position: absolute;
+    bottom: 0;
+  }
+}
+mat-radio-button:last-child {
+  margin-right: 1em;
+}
